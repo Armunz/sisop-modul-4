@@ -28,9 +28,9 @@
 
 -  [2.1 Instalasi FUSE](https://github.com/Armunz/sisop-modul-4#21-instalasi-fuse)
 
-- [2.2 Cara Kerja FUSE](https://github.com/Armunz/sisop-modul-4#22-instalasi-fuse)
+-  [2.2 Cara Kerja FUSE](https://github.com/Armunz/sisop-modul-4#22-cara-kerja-fuse)
 
--  [2.3 Membuat File System dengan FUSE](https://github.com/Armunz/sisop-modul-4#23-membuat-file-system-dengan-fuse)
+-  [2.3 Membuat Program FUSE](https://github.com/Armunz/sisop-modul-4#23-membuat-program-fuse)
 
   
 
