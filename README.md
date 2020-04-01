@@ -26,9 +26,11 @@
 
 -  [2. File System in Userspace (FUSE)](https://github.com/Armunz/sisop-modul-4#2-file-system-in-userspace-fuse)
 
--  [2.1 Instalasi Fuse](https://github.com/Armunz/sisop-modul-4#21-instalasi-fuse)
+-  [2.1 Instalasi FUSE](https://github.com/Armunz/sisop-modul-4#21-instalasi-fuse)
 
--  [2.2 Membuat File System dengan Fuse](https://github.com/Armunz/sisop-modul-4#22-membuat-file-system-dengan-fuse)
+- [2.2 Cara Kerja FUSE](https://github.com/Armunz/sisop-modul-4#22-instalasi-fuse)
+
+-  [2.3 Membuat File System dengan FUSE](https://github.com/Armunz/sisop-modul-4#23-membuat-file-system-dengan-fuse)
 
   
 
@@ -36,15 +38,16 @@
 
 _File system_ adalah struktur logika yang digunakan untuk mengendalikan akses data seperti bagaimana dia disimpan maupun diambil. _File system_ sendiri memiliki banyak jenis dengan penggunaan algoritma yang tentu berbeda.
 
+![enter image description here](https://github.com/Armunz/sisop-modul-4/blob/master/img/linux-filesystem.png?raw=true)
   
 
 ### 1.1 Tipe File System
 
 **1. File System Disk**
 
-  
-
 _File system disk_ adalah _file system_ yang didesain untuk menyimpan data pada sebuah media penyimpan data. Contohnya: FAT (FAT 12, FAT 16, FAT 320), NTFS, HFS, HFS+, ext2, ext3, ext4, ISO 9660, ODS-5 dan UDF.
+
+![enter image description here](https://github.com/Armunz/sisop-modul-4/blob/master/img/file-system.gif?raw=true)
 
   
 
@@ -62,7 +65,8 @@ _File system flash_ adalah _file system_ yang didesain untuk menyimpan data pada
 
 Konsep baru untuk manajemen _file_ adalah konsep _file system_ berbasis _database_. Sebagai perbaikan bagi Manajemen terstruktur hirarkis, file diidentifikasi oleh karakteristiknya, seperti tipe _file_, topik, pembuat, atau metadata yang sama.
 
-  
+![enter image description here](https://github.com/Armunz/sisop-modul-4/blob/master/img/kdbfs.png?raw=true)
+
 
 **4. File System Transaksional**
 
@@ -152,8 +156,9 @@ Inode adalah abstraksi VFS untuk berkas. Setiap berkas, _directory_, dan data la
 
 -  _File System Specific Information_: Menunjukkan informasi khusus yang dibutuhkan oleh suatu inode.
 
-  
+![enter image description here](https://github.com/Armunz/sisop-modul-4/blob/master/img/dentry.JPG?raw=true)
 
+  
 # 2. File System in Userspace (FUSE)
 
 FUSE (Filesystem in Userspace) adalah sebuah _interface_ dimana kita dapat membuat _file system_ sendiri pada _userspace_ pada linux.
@@ -162,6 +167,7 @@ FUSE (Filesystem in Userspace) adalah sebuah _interface_ dimana kita dapat membu
 
 Keuntungan menggunakan FUSE ialah kita dapat menggunakan _library_ apapun yang tersedia untuk membuat _file system_ sendiri tanpa perlu mengenali secara mendalam apa yang _file system_ sebenarnya lakukan di _kernel space_. Hal ini dilakukan karena modul FUSE yang dapat menjembatani antara kode _file system_ yang berada pada _userspace_ dengan _file system_ yang berada pada _kernel space_.
 
+![enter image description here](https://github.com/Armunz/sisop-modul-4/blob/master/img/fuse.png?raw=true)
 
 
 #
@@ -182,7 +188,7 @@ Untuk lebih jelasnya mari kita coba membuat program FUSE.
 
   
 
-##### Instalasi FUSE
+### 2.1 Instalasi FUSE
 
 Pertama-tama kita harus memstikan bahwa FUSE sudah ter-install di perangkat anda
 
@@ -196,7 +202,7 @@ $ sudo apt install libfuse*
 
   
 
-##### Cara Kerja FUSE:
+### 2.2 Cara Kerja FUSE
 
   
 
@@ -300,7 +306,7 @@ int (*write) (const char *, const char *, size_t, off_t, struct fuse_file_info *
 
   
 
-##### Membuat Program FUSE
+### 2.3 Membuat Program FUSE
 
 Fuse memiliki ```struct``` yang dinamakan ```fuse_operations``` yang didefinisikan seperti dibawah ini:
 
