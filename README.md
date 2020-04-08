@@ -802,9 +802,9 @@ return fuse_main(argc, argv, &xmp_oper, NULL);
 
 ## Soal Latihan
 
-1. Buat sebuah file sistem yang kamu buat ke /home/[user]/Downloads, lalu ubah nama file yang ada pada folder tersebut menjadi ```[nama file].[ekstensi].bak```. File .bak tersebut hanya dapat dibaca.
+1. Buat sebuah file system yang mengarah ke /home/[user]/Downloads, file sistem tersebut memiliki sifat mirroring, sehingga nama file yang ada pada folder tersebut akan ditampilkan terbalik. Sebagai contoh ```contohfile.txt``` menjadi ```elifhotnoc.txt```. File system ini hanya memiliki akses read.
 
-2. Buat sebuah file system yang mengarah ke /home/[user]/Documents. Pada saat membuka file dengan ekstensi .pdf, .doc, .txt pada direktori Documents akan muncul pesan error “Terjadi kesalahan! File berisi konten berbahaya.” dan tidak dapat membaca file tersebut. Setelah memunculkan pesan error, file tersebut diganti namanya menjadi ```<namafile>.<ekstensi>.ditandai```. Setelah memunculkan pesan error dan mengganti nama file tadi, file tersebut otomatis dipindahkan ke direktori ```rahasia```. Jika folder rahasia belum ada, maka secara otomatis akan membuat direktori “rahasia” sebelum dipindahkan dan file tidak bisa di read write execute.
+2. Buat sebuah file system yang mengarah ke /home/[user]/Documents. File system ini memiliki fitur auto backup, dimana ketika file pada folder tersebut dimodifikasi, file tersebut dengan versi sebelum mengalami perubahan akan disimpan dengan nama ```<namafile>.<time:date>.<ekstensi>``` di dalam direktori ```backup```. Jika folder backup belum ada, maka secara otomatis akan membuat direktori ```backup``` sebelum dipindahkan dan file tidak bisa di read-write-execute selama berada di direktori ```backup```.
 
   
   
