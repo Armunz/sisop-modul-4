@@ -810,7 +810,9 @@ return fuse_main(argc, argv, &xmp_oper, NULL);
 ```
 Untuk melakukan unmount **FUSE**, jalankan command di bawah ini:
 ```
-sudo umount 
+sudo umount [direktori tujuan]
+atau
+fusermount -u [direktori tujuan]
 ```
   
 
