@@ -61,7 +61,7 @@ _File system disk_ adalah _file system_ yang didesain untuk menyimpan data pada 
 
 ![enter image description here](https://github.com/Armunz/sisop-modul-4/blob/master/img/648x463xgparted-showing-primary-extended-and-logical-partitions.png.pagespeed.ic.foZUIWymSb.png?raw=true)
 
-- HFS dan HFS+ adalah File System dari MacOS
+- APFS, HFS dan HFS+ adalah File System dari MacOS
 
 ![enter image description here](https://github.com/Armunz/sisop-modul-4/blob/master/img/xformat-drive.png.pagespeed.gp+jp+jw+pj+ws+js+rj+rp+rw+ri+cp+md.ic.GnI_H55kwh.png?raw=true)
 
