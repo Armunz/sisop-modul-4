@@ -33,6 +33,8 @@
 
 -  [2.3 Membuat Program FUSE](https://github.com/Armunz/sisop-modul-4#23-membuat-program-fuse)
 
+- [2.4 Unmount FUSE](https://github.com/Armunz/sisop-modul-4#24-unmount-fuse)
+
   
 
 # 1. File System
@@ -805,9 +807,12 @@ umask(0);
 return fuse_main(argc, argv, &xmp_oper, NULL);
 
 }
-  
 
 ```
+
+### 2.4 Unmount FUSE
+Unmount command digunakan untuk "unmount" sebuah filesystem yang telah ter-mount, lalu juga menginformasikan ke sistem untuk menyelesaikan semua operasi read dan write yang masih tertunda agar bisa di-detach (dilepaskan) dengan aman.
+
 Untuk melakukan **unmount** FUSE, jalankan command di bawah ini:
 ```
 sudo umount [direktori tujuan]
